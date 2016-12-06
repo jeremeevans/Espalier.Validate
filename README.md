@@ -10,3 +10,4 @@ Validation attributes, fluent interface, and extensions to validate models and t
 * It should be easily extendable.
 * Allow consumption via attributes, or a more direct approach.
 * Push validation down into services and the domain to keep code DRY.
+* Things should run async and in parallel whenever possible to make it fast.
