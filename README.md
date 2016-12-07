@@ -1,4 +1,4 @@
-[![espalier-validate MyGet Build Status](https://www.myget.org/BuildSource/Badge/espalier-validate?identifier=563a92c7-6ce6-49e7-935a-08a79849aa05)](https://www.myget.org/)
+[![espalier-validate MyGet Build Status](https://www.myget.org/BuildSource/Badge/espalier-validate?identifier=46603932-4c46-4d55-9ce5-b5bcb628ac47)](https://www.myget.org/)
 
 # Espalier.Validate
 
