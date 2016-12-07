@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
-
-<package>
+<package >
   <metadata>
     <id>.\Espalier.Validate\project.json</id>
     <version>0.0.1</version>
