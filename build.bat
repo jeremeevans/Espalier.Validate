@@ -15,5 +15,17 @@ if "%nuget%" == "" (
 )
 
 dotnet restore .\Espalier.Validate\project.json
-dotnet build .\Espalier.Validate\project.json --configuration Release
+dotnet build .\Espalier.Validate\project.json --configuration config
+if not "%errorlevel%"=="0" goto failure
+
+dotnet restore .\Espalier.Validate.Tests\project.json
+dotnet build .\Espalier.Validate.Tests\project.json --configuration config
+if not "%errorlevel%"=="0" goto failure
+
+%GallioEcho% .\Espalier.Validate.Tests\bin\%config%\Espalier.Validate.Tests.dll
+if not "%errorlevel%"=="0" goto failure
+
 dotnet pack .\Espalier.Validate\project.json --configuration release
+
+:failure
+exit -1
