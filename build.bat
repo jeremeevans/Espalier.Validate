@@ -23,6 +23,8 @@ if not "%errorlevel%"=="0" goto failure
 
 dotnet pack .\Espalier.Validate\project.json --configuration release
 
+REM Testing to see if only one build is run...
+
 :success
 exit 0
 
