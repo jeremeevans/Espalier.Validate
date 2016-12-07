@@ -1,5 +1,5 @@
 {
-  "version": "0.0.1-*",
+  "version": "1.0.2-*",
 
   "packOptions": {
     "description": "Validation attributes, fluent interface, and extensions to validate models and throw rich exceptions.",
