@@ -1,13 +1,16 @@
 {
   "version": "0.0.1-*",
-  "description": "Validation attributes, fluent interface, and extensions to validate models and throw rich exceptions.",
-  "authors": [ "Jereme Evans" ],
-  "licenseUrl": "https://github.com/jeremeevans/Espalier.Validate/blob/master/LICENSE.md",
-  "projectUrl": "https://github.com/jeremeevans/Espalier.Validate/",
-  "tags": [ "validation" ],
-  "requireLicenseAcceptance": false,
-  "owners": [ "Jereme Evans" ],
- 
+
+  "packOptions": {
+    "description": "Validation attributes, fluent interface, and extensions to validate models and throw rich exceptions.",
+    "authors": [ "Jereme Evans" ],
+    "licenseUrl": "https://github.com/jeremeevans/Espalier.Validate/blob/master/LICENSE.md",
+    "projectUrl": "https://github.com/jeremeevans/Espalier.Validate/",
+    "tags": [ "validation" ],
+    "requireLicenseAcceptance": false,
+    "owners": [ "Jereme Evans" ]
+  },
+
   "dependencies": {
     "NETStandard.Library": "1.6.0",
     "System.Linq.Parallel": "4.0.0"
