@@ -1,5 +1,5 @@
 [![espalier-validate MyGet Build Status](https://www.myget.org/BuildSource/Badge/espalier-validate?identifier=563a92c7-6ce6-49e7-935a-08a79849aa05)](https://www.myget.org/)
-                                         https://www.myget.org/BuildSource/Badge/espalier-validate?identifier=563a92c7-6ce6-49e7-935a-08a79849aa05
+
 # Espalier.Validate
 
 Validation attributes, fluent interface, and extensions to validate models and throw rich exceptions.
