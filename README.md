@@ -14,6 +14,12 @@ Validation attributes, fluent interface, and extensions to validate models and t
 * Push validation down into services and the domain to keep code DRY.
 * Things should run async and in parallel whenever possible to make it fast.
 
+## Why use Espalier.Validate instead of data annotations?
+
+* Espalier.Validate has no dependencies on ASP.NET and other web-related binaries. That makes it not icky to have it in your domain models and entities.
+* Espalier.Validate provides Validate.That for dynamically validing object's properties.
+* You can contribute to this repository and help make a library you will enjoy using for a long time instead of being pissed off when Microsoft throws out (yet another!) their technology.
+
 ## Using the library
 
 ### To return a JSON payload with errors from your Web API 2 project
@@ -143,8 +149,6 @@ public class ValidateRequiredAttribute : ValidateAttribute
 
 public static class ValidationExtensions
 {
-    private static readonly Dictionary<Type, Dictionary<PropertyInfo, Tuple<string, ValidateAttribute[]>>> KnownModels = new Dictionary<Type, Dictionary<PropertyInfo, Tuple<string, ValidateAttribute[]>>>();
-
     public static ValidationContext IsRequired<TModel>(this TModel toValidate, Expression<Func<TModel, object>> selector, string friendlyName = null)
     {
         var property = (PropertyInfo)((MemberExpression)selector.Body).Member;
