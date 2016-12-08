@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using NUnit.Framework;
+using Espalier.Validate.Extensions;
 
 namespace Espalier.Validate.Tests.ExtensionTests
 {
@@ -128,7 +129,7 @@ namespace Espalier.Validate.Tests.ExtensionTests
                 Zip = "843"
             };
 
-            var exception = Assert.ThrowsAsync<EspalierValidationException>(async () => await Validate.That(model.IsUSPostalCode(m => m.Zip, "Zip code")));
+            var exception = Assert.ThrowsAsync<EspalierValidationException>(async () => await Validate.That(model.IsPostalCode(m => m.Zip, "Zip code")));
 
             Assert.AreEqual(1, exception.ValidationErrors.Length);
             Assert.AreEqual("Zip code is not a valid postal code.", exception.ValidationErrors[0].ErrorMessages[0]);
@@ -143,7 +144,7 @@ namespace Espalier.Validate.Tests.ExtensionTests
                 Zip = "85020"
             };
 
-            await Validate.That(model.IsUSPostalCode(m => m.Zip, "Zip code"));
+            await Validate.That(model.IsPostalCode(m => m.Zip, "Zip code"));
         }
 
         [Test]
@@ -158,7 +159,7 @@ namespace Espalier.Validate.Tests.ExtensionTests
 
             var exception = Assert.ThrowsAsync<EspalierValidationException>(async () => 
                 await Validate.That(
-                    model.IsUSPostalCode(m => m.Zip, "Zip code"),
+                    model.IsPostalCode(m => m.Zip, "Zip code"),
                     model.IsPhoneNumber(m => m.Zip, "Zip code"),
                     model.IsRequired(m => m.Zip, "Zip code"),
                     model.IsPhoneNumber(m => m.Phone, "Phone number"),
