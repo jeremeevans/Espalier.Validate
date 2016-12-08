@@ -13,7 +13,7 @@ namespace Espalier.Validate.Validations
 
         public static RequiredValidation Instance => _instance ?? (_instance = new RequiredValidation());
 
-        public Task<string> Validate(object value, string propertyFriendlyName)
+        public Task<string> RunValidation(object value, string propertyFriendlyName)
         {
             var stringValue = value as string;
             return Task.FromResult(string.IsNullOrWhiteSpace(stringValue) ? string.Format(RequiredErrorMessage, propertyFriendlyName) : string.Empty);

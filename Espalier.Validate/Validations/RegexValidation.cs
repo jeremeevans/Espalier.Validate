@@ -11,7 +11,7 @@ namespace Espalier.Validate.Validations
         protected abstract string ErrorMessage { get; }
         protected virtual bool IgnoreCase => true;
 
-        public Task<string> Validate(object value, string propertyFriendlyName)
+        public Task<string> RunValidation(object value, string propertyFriendlyName)
         {
             var stringValue = value as string;
 

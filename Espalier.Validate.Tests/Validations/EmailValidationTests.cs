@@ -17,7 +17,7 @@ namespace Espalier.Validate.Tests.Validations
         [TestCase("test", ExpectedResult = ErrorMessage)]
         public async Task<string> ValidateEmailAddress(string emailAddress)
         {
-            return await EmailValidation.Instance.Validate(emailAddress, PropertyName);
+            return await EmailValidation.Instance.RunValidation(emailAddress, PropertyName);
         }
     }
 }

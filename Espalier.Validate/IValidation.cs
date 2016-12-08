@@ -4,6 +4,6 @@ namespace Espalier.Validate
 {
     public interface IValidation
     {
-        Task<string> Validate(object value, string propertyFriendlyName);
+        Task<string> RunValidation(object value, string propertyFriendlyName);
     }
 }

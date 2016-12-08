@@ -7,7 +7,7 @@ namespace Espalier.Validate.Attributes
     {
         public override Task<string> GetError(object value, string propertyFriendlyName)
         {
-            return PhoneNumberValidation.Instance.Validate(value, propertyFriendlyName);
+            return PhoneNumberValidation.Instance.RunValidation(value, propertyFriendlyName);
         }
     }
 }

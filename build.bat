@@ -1,17 +1,5 @@
 @echo Off
 
-set version=0.0.1
-if not "%PackageVersion%" == "" (
-   set version=%PackageVersion%
-)
-
-set nuget=
-if "%nuget%" == "" (
-	set nuget=nuget
-)
-
-set nunit=".\NUnit.Console-3.5.0\nunit3-console.exe"
-
 dotnet restore .\Espalier.Validate.Tests\project.json
 dotnet restore .\Espalier.Validate\project.json
 

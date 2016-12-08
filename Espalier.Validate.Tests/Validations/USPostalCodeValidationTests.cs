@@ -24,7 +24,7 @@ namespace Espalier.Validate.Tests.Validations
         [TestCase("98203-12350", ExpectedResult = ErrorMessage)]
         public async Task<string> ValidateEmailAddress(string postalCode)
         {
-            return await USPostalCodeValidation.Instance.Validate(postalCode, PropertyName);
+            return await USPostalCodeValidation.Instance.RunValidation(postalCode, PropertyName);
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Espalier.Validate.Tests.Validations
         [TestCase("test", ExpectedResult = "")]
         public async Task<string> RequiredValidations(string value)
         {
-            return await RequiredValidation.Instance.Validate(value, PropertyName);
+            return await RequiredValidation.Instance.RunValidation(value, PropertyName);
         }
     }
 }

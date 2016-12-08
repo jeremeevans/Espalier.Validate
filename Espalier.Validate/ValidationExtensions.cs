@@ -4,12 +4,66 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using Espalier.Validate.Attributes;
+using System.Linq.Expressions;
+using Espalier.Validate.Validations;
 
 namespace Espalier.Validate
 {
     public static class ValidationExtensions
     {
         private static readonly Dictionary<Type, Dictionary<PropertyInfo, Tuple<string, ValidateAttribute[]>>> KnownModels = new Dictionary<Type, Dictionary<PropertyInfo, Tuple<string, ValidateAttribute[]>>>();
+
+        public static ValidationContext IsRequired<TModel>(this TModel toValidate, Expression<Func<TModel, object>> selector, string friendlyName = null)
+        {
+            var property = (PropertyInfo)((MemberExpression)selector.Body).Member;
+
+            return new ValidationContext
+            {
+                FriendlyName = string.IsNullOrWhiteSpace(friendlyName) ? property.Name : friendlyName,
+                PropertyName = property.Name,
+                Validation = RequiredValidation.Instance,
+                Value = property.GetValue(toValidate)
+            };
+        }
+
+        public static ValidationContext IsEmail<TModel>(this TModel toValidate, Expression<Func<TModel, object>> selector, string friendlyName = null)
+        {
+            var property = (PropertyInfo)((MemberExpression)selector.Body).Member;
+
+            return new ValidationContext
+            {
+                FriendlyName = string.IsNullOrWhiteSpace(friendlyName) ? property.Name : friendlyName,
+                PropertyName = property.Name,
+                Validation = EmailValidation.Instance,
+                Value = property.GetValue(toValidate)
+            };
+        }
+
+        public static ValidationContext IsPhoneNumber<TModel>(this TModel toValidate, Expression<Func<TModel, object>> selector, string friendlyName = null)
+        {
+            var property = (PropertyInfo)((MemberExpression)selector.Body).Member;
+
+            return new ValidationContext
+            {
+                FriendlyName = string.IsNullOrWhiteSpace(friendlyName) ? property.Name : friendlyName,
+                PropertyName = property.Name,
+                Validation = PhoneNumberValidation.Instance,
+                Value = property.GetValue(toValidate)
+            };
+        }
+
+        public static ValidationContext IsUSPostalCode<TModel>(this TModel toValidate, Expression<Func<TModel, object>> selector, string friendlyName = null)
+        {
+            var property = (PropertyInfo)((MemberExpression)selector.Body).Member;
+
+            return new ValidationContext
+            {
+                FriendlyName = string.IsNullOrWhiteSpace(friendlyName) ? property.Name : friendlyName,
+                PropertyName = property.Name,
+                Validation = USPostalCodeValidation.Instance,
+                Value = property.GetValue(toValidate)
+            };
+        }
 
         public static async Task<ValidationError[]> Validate<TModel>(this TModel toValidate, ErrorResponse response = ErrorResponse.ThrowException)
             where TModel : class

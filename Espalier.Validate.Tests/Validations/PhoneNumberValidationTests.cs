@@ -28,7 +28,7 @@ namespace Espalier.Validate.Tests.Validations
         [TestCase("9093488", ExpectedResult = ErrorMessage)]
         public async Task<string> PhoneNumberValidateTest(string phoneNumber)
         {
-            return await PhoneNumberValidation.Instance.Validate(phoneNumber, PropertyName);
+            return await PhoneNumberValidation.Instance.RunValidation(phoneNumber, PropertyName);
         }
     }
 }
