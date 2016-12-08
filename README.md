@@ -4,6 +4,16 @@
 
 Validation attributes, fluent interface, and extensions to validate models and throw rich exceptions.
 
+## How to install Espalier.Validate
+
+You can install Espalier.Validate from Nuget:
+
+```
+PM> Install-Package Espalier.Validate
+```
+
+There are currently versions targeting .NETFramework 4.5, 4.5.1, 4.5.2, 4.6, and 4.6.1, as well as .NETStandard 1.6. Need more? [Let me know](mailto:jereme@jeremeevans) and I'll create them if they make sense.
+
 ## Goals of Espalier.Validate
 
 * Create a .NET validation library with minimal dependencies.
