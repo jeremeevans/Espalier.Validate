@@ -18,7 +18,8 @@ Validation attributes, fluent interface, and extensions to validate models and t
 
 * Espalier.Validate has no dependencies on ASP.NET and other web-related binaries. That makes it not icky to have it in your domain models and entities.
 * Espalier.Validate provides Validate.That for dynamically validing object's properties.
-* You can contribute to this repository and help make a library you will enjoy using for a long time instead of being pissed off when Microsoft throws out (yet another!) their technology.
+* You can contribute to this repository and help make a library you will enjoy using for a long time instead of being pissed off when Microsoft throws out (yet another!) technology in their stack.
+* This library has a comprehensive set of unit tests, and if there's something that isn't tested to your liking, you can write a test and contribute it back to the cause.
 
 ## Using the library
 
