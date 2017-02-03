@@ -11,6 +11,13 @@ namespace Espalier.Validate
             ValidationErrors = validationErrors.ToArray();
         }
 
+        public EspalierValidationException(params string[] unattachedMessages)
+        {
+            var errors = new List<ValidationError>();
+            errors.Add(new ValidationError(unattachedMessages));
+            ValidationErrors = errors.ToArray();
+        }
+
         public ValidationError[] ValidationErrors { get; set; }
     }
 }
