@@ -1,18 +1,18 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Espalier.Validate", "Espalier.Validate\Espalier.Validate.xproj", "{7F217AD6-D2C0-4847-8150-B58C6FF7B1D3}"
-EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Espalier.Validate.Tests", "Espalier.Validate.Tests\Espalier.Validate.Tests.xproj", "{1A953D32-F2FD-4860-B6DF-9270A5DD071E}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E11F21E8-EF27-4C7F-B093-AC6303BAAC8B}"
 	ProjectSection(SolutionItems) = preProject
 		build.bat = build.bat
 		LICENSE.md = LICENSE.md
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Espalier.Validate", "Espalier.Validate\Espalier.Validate.csproj", "{7F217AD6-D2C0-4847-8150-B58C6FF7B1D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Espalier.Validate.Tests", "Espalier.Validate.Tests\Espalier.Validate.Tests.csproj", "{1A953D32-F2FD-4860-B6DF-9270A5DD071E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

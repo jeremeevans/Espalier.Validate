@@ -15,6 +15,7 @@ namespace Espalier.Validate.Tests.Validations
         [TestCase("05493", ExpectedResult = "")]
         [TestCase("05493-8348", ExpectedResult = "")]
         [TestCase("98203-1234", ExpectedResult = "")]
+        [TestCase("982031234", ExpectedResult = "")]
         [TestCase("", ExpectedResult = "")]
         [TestCase(null, ExpectedResult = "")]
         [TestCase("9820", ExpectedResult = ErrorMessage)]
